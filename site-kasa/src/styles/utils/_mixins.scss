@@ -1,0 +1,42 @@
+/////breakpoint
+@mixin breakpoint($breakpoint) {
+
+  @if $breakpoint =="sm" {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+
+  @else if $breakpoint =="md" {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+
+
+  @else if $breakpoint =="lg" {
+    @media (min-width: 1240px) {
+      @content;
+    }
+  }
+
+}
+
+///container
+@mixin container {
+  max-width: 1240px;
+  margin: auto;
+}
+
+///text-ellipsis
+@mixin text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+///font-weight
+@mixin font-bold {
+  font-weight: bold;
+}

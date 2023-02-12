@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main {
+    flex: 1;
+
+    .container {
+        padding: $section-padding;
+    }
+}
+
+.w-100 {
+    width: 100%
+}
+
+// font-weight
+.font-regular {
+    font-weight: $font-regular;
+}
+
+.font-bold {
+    font-weight: $font-bold;
+}
+
+.font-black {
+    font-weight: $font-black;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.d-flex {
+    display: flex
+}
+
+.align-items-center {
+    align-items: center
+}
+
+.mb-2 {
+    margin-bottom: 0.3rem
+}
+
+@include breakpoint(md) {
+    .container {
+        @include container;
+    }
+}

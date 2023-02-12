@@ -1,0 +1,22 @@
+//utils
+@import "./utils/variables";
+@import "./utils/mixins";
+
+//base
+@import "./base/reset";
+@import "./base/typography";
+@import "./base/commun";
+
+//components
+@import "../components/Header/header";
+@import "../components/Footer/footer";
+@import "../components/Hero/hero";
+@import"../pages/NotFound/not-found";
+@import"../components/Cards/Cards";
+@import"../components/Tags/tag";
+@import"../pages/ProductDetail/product-detail";
+@import"../components/Reviews/reviews";
+@import"../components/Host/host";
+@import"../components/Collapsible/collapsible";
+@import"../components/Slider/slider";
+@import"../components/Loader/loader";

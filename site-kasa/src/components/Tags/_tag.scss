@@ -1,0 +1,22 @@
+ul.tag {
+    margin-bottom: 0;
+
+    li {
+        font-size: 10px;
+        line-height: 14px;
+        padding: 5px 20px;
+        border-radius: $radius-md;
+        background: $colour-primary;
+        color: $colour-white;
+        text-align: center;
+        display: inline-flex;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@include breakpoint(sm) {
+    ul.tag li {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,66 @@
+header .container {
+    position: relative;
+    padding: 25px 20px 25px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 46px;
+    display: block;
+}
+
+nav.header-nav {
+    margin-left: auto;
+
+    ul {
+
+        display: flex;
+        align-items: center;
+
+        li {
+            a {
+                position: relative;
+                display: block;
+                text-decoration: none;
+                font-weight: $font-bold;
+                color: $colour-primary;
+                margin-left: 15px;
+                border-bottom: 1px solid transparent;
+                font-size: 12px;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -20%;
+                    left: -5%;
+                    width: 0%;
+                    height: 1px;
+                    background-color: $colour-primary;
+                    transition: all 0.3s ease;
+                }
+
+                &:hover:after,
+                &.active::after {
+                    width: 110%;
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(sm) {
+    nav.header-nav ul li a {
+        font-size: 24px;
+    }
+
+    .logo {
+        height: 50px;
+    }
+}
+
+@include breakpoint(sm) {
+    nav.header-nav ul li a:first-child {
+        margin-right: 40px;
+    }
+}

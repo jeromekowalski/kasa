@@ -1,0 +1,61 @@
+.container-reviews {
+    position: relative;
+    height: 15px;
+}
+
+ul.reviews {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 15px;
+
+    li span {
+        display: none;
+    }
+}
+
+.reviews-full {
+    margin-top: -29px;
+}
+
+.icon-star {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    -webkit-mask: url('../../assets/star.svg') no-repeat 50% 50%;
+    mask: url('../../assets/star.svg') no-repeat 50% 50%;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+}
+
+.icon-empty {
+    background-color: darken($colour-secondary , 10%);
+}
+
+.icon-full {
+    background-color: $colour-primary;
+}
+
+@include breakpoint(sm) {
+    .icon-star {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@include breakpoint(md) {
+
+    .container-reviews {
+        height: 30px;
+        width: 150px;
+    }
+
+    ul.reviews {
+        height: 30px;
+        margin-top: 20px;
+    }
+}

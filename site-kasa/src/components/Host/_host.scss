@@ -1,0 +1,31 @@
+.host {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    .name {
+        font-size: 12px;
+        text-align: right;
+    }
+
+    img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-left: 10px;
+    }
+}
+
+@include breakpoint(sm) {
+    .host {
+        .name {
+            font-size: 18px;
+        }
+
+        img {
+            width: 64px;
+            height: 64px;
+        }
+    }
+}

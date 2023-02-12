@@ -1,0 +1,118 @@
+.product-cards {
+    display: grid;
+}
+
+.cards {
+    position: relative;
+    width: 100%;
+    height: 255px;
+    border-radius: $radius-md;
+    background: $colour-primary;
+    overflow: hidden;
+    transition: box-shadow .2s linear;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+    a {
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 120px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: $gradient-cards;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+    }
+
+    h2 {
+        position: absolute;
+        z-index: 1000;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+        color: $colour-white;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+        height: 67px;
+        width: 100%;
+        transform: translateY(0);
+        transition: all 0.4s ease;
+    }
+
+
+    img {
+        position: relative;
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+
+    }
+}
+
+
+@include breakpoint(sm) {
+    .product-cards:has(.cards) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 20px;
+    }
+
+    .cards {
+        height: 340px;
+        max-width: 100%;
+    }
+}
+
+@include breakpoint(md) {
+    .product-cards {
+        padding: 56px 50px;
+        background-color: $colour-secondary;
+        border-radius: $radius-lg;
+    }
+
+    .product-cards:has(.cards) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cards {
+        display: block;
+
+
+
+        &:hover,
+        &:focus {
+            a {
+                display: block;
+                z-index: 10000000;
+                height: 100%;
+
+                &::after {
+                    height: 250px;
+                    display: block;
+                }
+            }
+
+            box-shadow: $shadow-lg;
+
+            h2 {
+                transform: translateY(-20px);
+            }
+
+
+        }
+    }
+}
+
+@include breakpoint(lg) {
+    .product-cards:has(.cards) {
+        gap: 30px 50px;
+    }
+
+    .cards {
+        height: 340px;
+    }
+}

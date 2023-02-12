@@ -1,0 +1,73 @@
+.hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: $radius-md;
+    height: 111px;
+    margin-bottom: 20px;
+
+    img {
+
+        border-radius: $radius-md;
+        overflow: hidden;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba($color: #000000, $alpha: 0.5);
+
+    }
+
+    h1 {
+        position: absolute;
+        z-index: 1000;
+        color: $colour-white;
+        font-size: 24px;
+        width: 100%;
+        text-align: left;
+        top: 10px;
+        padding: 5px 20px;
+    }
+
+
+
+}
+
+@include breakpoint(sm) {
+    .hero {
+        border-radius: $radius-lg;
+        height: 150px;
+        margin-bottom: 40px;
+
+        img {
+            border-radius: $radius-lg;
+        }
+
+        h1 {
+            top: 33%;
+            text-align: center;
+            font-size: 35px;
+        }
+
+    }
+}
+
+@include breakpoint(md) {
+    .hero {
+        height: 223px;
+
+        h1 {
+            top: 33%;
+            font-size: 48px;
+        }
+    }
+}

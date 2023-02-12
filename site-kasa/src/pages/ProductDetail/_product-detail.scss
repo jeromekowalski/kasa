@@ -1,0 +1,35 @@
+.container-details {
+    .review-profile {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@include breakpoint(sm) {
+    .grid {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+}
+
+@include breakpoint(md) {
+    .container-details {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+
+        .name-location-tag {
+            width: calc(100% - 200px);
+        }
+
+        .review-profile {
+            width: 200px;
+            margin-left: auto;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-end;
+        }
+    }
+}

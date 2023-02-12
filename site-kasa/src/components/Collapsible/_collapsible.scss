@@ -1,0 +1,79 @@
+.collapse {
+    width: 100%;
+    margin-top: 10px;
+
+    .btn {
+        position: relative;
+        display: flex;
+        align-items: center;
+        background: $colour-primary;
+        color: $colour-white;
+        font-size: 13px;
+        border-radius: $radius-md;
+        border: none;
+        width: 100%;
+        text-align: left;
+        padding: 8px 13px;
+        z-index: 1;
+        cursor: pointer;
+
+        .arrow {
+            margin-left: auto;
+            max-height: 10px;
+            transition: all 0.2s linear;
+        }
+
+        &.active {
+            .arrow {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .body {
+        padding: 20px 10px;
+        background: $colour-secondary;
+        border-bottom-left-radius: $radius-md;
+        border-bottom-right-radius: $radius-md;
+        font-size: 12px;
+        margin-top: -10px;
+        line-height: 1rem;
+        transform: translateY(100%);
+        transition: all 0.2s linear;
+        animation-duration: 0.4s;
+        animation-name: fadeIn;
+
+        &.active {
+            transform: translateY(0%);
+        }
+
+    }
+}
+
+@include breakpoint(sm) {
+    .collapse {
+        .btn {
+            font-size: 1.2rem;
+            padding: 13px;
+
+            .arrow {
+                max-height: 18px;
+            }
+        }
+
+        .body {
+            font-size: 1rem;
+            line-height: 1.2rem;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
